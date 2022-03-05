@@ -4,12 +4,16 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Homepage</title>
+<title>Form</title>
 </head>
 <body>
-<h1>Does it work now?</h1>
-<a href="showForm"> Go to the Form </a>
+<!--  -->
+<form action="formProcessor" method="get">
+
+	<input type="text" name="visitorsName">
+	
+	<input type="submit">
+
+</form>
 </body>
-
-
 </html>
