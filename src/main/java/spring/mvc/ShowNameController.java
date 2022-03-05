@@ -26,20 +26,31 @@ public class ShowNameController {
 		return "processedForm"; //Esta es la respuesta que nos da el servidor a la petición con el form
 	}
 	
-	//3rd Method
+	//3rd Method: processes the information and also he call the view
 	@RequestMapping("/formProcessor2")
 	public String proFormProcessor(HttpServletRequest request, Model model) {
-		
+	
+		/*
+		 * Lee la informacion que viene del cuadro de texto, por eso pedimos el
+		 * .getParameter("") que captura la información del cuadro de texto
+		 * visitorsName == Nombre del cuadro de texto que queremos capturar
+		 * */
 		String name = request.getParameter("visitorsName");
 		
+		/*INFORMACION que INYECTAMOS AL MODELO*/
 		name+=". I'm very grateful";
 		
+		/*Esto es para adornar y concatenarlo con la variable name, para que el metodo "haga algo mas"*/
 		String finalMessage = "Thank you for visiting my project " + name;
 		
+		/*METODO PARA AGREGAR INFORMACION AL MODELO:
+		 * Metodo addAttribute(): el string identificatorio y el objeto en cuestion.
+		 * */
 		model.addAttribute("message", finalMessage);
+		/*message: Lo que haya almacenado en finalMessage SPRING lo va a identificar como message*/
 				
 				
-				
+		//Devuelve la vista		
 		return "processedForm";
 		
 		
