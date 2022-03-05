@@ -10,5 +10,11 @@
 
 Hi ${param.visitorsName }!! Welcome to my first Spring project
 
+<p><br>
+<h2>that's all folks!!</h2>
+
+${message}
+
+
 </body>
 </html>

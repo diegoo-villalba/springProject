@@ -8,7 +8,7 @@
 </head>
 <body>
 <!--  -->
-<form action="formProcessor" method="get">
+<form action="formProcessor2" method="get">
 
 	<input type="text" name="visitorsName">
 	
