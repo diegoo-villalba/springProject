@@ -1,10 +1,9 @@
 package spring.mvc;
 
-import javax.servlet.http.HttpServletRequest;
-
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 
 @Controller
@@ -28,14 +27,20 @@ public class ShowNameController {
 	
 	//3rd Method: processes the information and also he call the view
 	@RequestMapping("/formProcessor2")
-	public String proFormProcessor(HttpServletRequest request, Model model) {
 	
+	//FORMA TRADICIONAL
+	//public String proFormProcessor(HttpServletRequest request, Model model) {
+	
+	//FORMA MEJORADA: Utilizando @RequestParam para la recuperación de parámetros en una petición de tipo request
+	public String proFormProcessor(@RequestParam("visitorsName") String name, Model model) {
 		/*
 		 * Lee la informacion que viene del cuadro de texto, por eso pedimos el
 		 * .getParameter("") que captura la información del cuadro de texto
 		 * visitorsName == Nombre del cuadro de texto que queremos capturar
 		 * */
-		String name = request.getParameter("visitorsName");
+		
+		//FORMA TRADICIONAL
+		//String name = request.getParameter("visitorsName");
 		
 		/*INFORMACION que INYECTAMOS AL MODELO*/
 		name+=". I'm very grateful";
