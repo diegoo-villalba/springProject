@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 
 @Controller
+@RequestMapping("/main")
 public class ShowNameController {
 	
 	//2 Methods: 

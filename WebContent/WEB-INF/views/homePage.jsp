@@ -15,7 +15,11 @@
 
 	
 	<div class="divForm">
-		<a href="showForm"> Go to the Form </a>
+		<a href="secondary/showForm"> Go to the Form </a>
+	</div>
+	<br><br><br><br>
+	<div class="divForm">
+		<a href="user/showUserForm"> Aren't you registered? Sign in! </a>
 	</div>
 
 </div>
