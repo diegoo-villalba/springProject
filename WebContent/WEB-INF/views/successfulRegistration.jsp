@@ -4,14 +4,17 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<link rel="stylesheet" type="text/css"
-	href="${pageContext.request.contextPath }/resources/style/myStyle.css">
 <title>Successful registration</title>
 </head>
 <body>
 
-The user ${newUser.name } ${newUser.lastname } has successfully registered!!
-
+The user <strong>${newUser.name } ${newUser.lastname }</strong> has successfully registered!!
+<br/>
+The ocuppation of <strong>${newUser.name }</strong> is: <strong>${newUser.ocuppation}</strong>
+<br/>
+The assigned gender is: <strong>${newUser.gender}</strong>
+<br/>
+The assigned language is: <strong>${newUser.language}</strong>
 
 </body>
 </html>

@@ -5,8 +5,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<link rel="stylesheet" type="text/css"
-	href="${pageContext.request.contextPath }/resources/style/myStyle.css">
+
 <title>Register form</title>
 </head>
 <body>
@@ -15,11 +14,43 @@
 
 Name<form:input path="name"/>
 
-<br><br><br><br>
+<br/><br/><br/><br/>
 
 Lastname<form:input path="lastname"/>
 
-<br><br><br><br>
+<br/><br/><br/><br/>
+
+Gender: <br/>
+
+Female<form:radiobutton path="gender" value="Female"/>
+<br/>
+Male<form:radiobutton path="gender" value="Male"/>
+<br/>
+Other<form:radiobutton path="gender" value="Other"/>
+<br/>
+
+<br/><br/><br/><br/>
+
+Ocuppation: <br/>
+
+<form:select path="ocuppation" multiple="true">
+
+<form:option value="Student" label="Student"></form:option>
+<form:option value="Worker" label="Worker"></form:option>
+<form:option value="Unemployed" label="Unemployed"></form:option>
+
+</form:select>
+
+<br/><br/><br/><br/>
+
+Language: <br/>
+
+English: <form:checkbox path="language" value="English"/>
+Spanish: <form:checkbox path="language" value="Spanish"/>
+German: <form:checkbox path="language" value="German"/>
+Danish: <form:checkbox path="language" value="Danish"/>
+
+<br/><br/><br/><br/>
 
 <input type="submit" value="Send">
 
