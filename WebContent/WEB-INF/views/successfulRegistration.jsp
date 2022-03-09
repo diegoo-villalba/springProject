@@ -8,7 +8,9 @@
 </head>
 <body>
 
-The user <strong>${newUser.name } ${newUser.lastname }</strong> has successfully registered!!
+The user <strong>${newUser.name } ${newUser.lastname }</strong> and email <strong>${newUser.email }</strong> has successfully registered!!
+<br/>
+The age of <strong>${newUser.name }</strong> is: <strong>${newUser.age}</strong>
 <br/>
 The ocuppation of <strong>${newUser.name }</strong> is: <strong>${newUser.ocuppation}</strong>
 <br/>

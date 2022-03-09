@@ -21,6 +21,14 @@ Lastname<form:input path="lastname"/>
 
 <br/><br/><br/><br/>
 
+Age<form:input path="age"/>
+<form:errors path="age" style="color: red"></form:errors>
+<br/><br/><br/><br/>
+
+Email<form:input path="email"/>
+<form:errors path="email" style="color: red"></form:errors>
+<br/><br/><br/><br/>
+
 Gender: <br/>
 
 Female<form:radiobutton path="gender" value="Female"/>

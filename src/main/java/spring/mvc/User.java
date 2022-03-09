@@ -1,19 +1,32 @@
 package spring.mvc;
 
+import javax.validation.constraints.Email;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 public class User {
 	
 	@NotNull
-	@Size(min=3, message=" Field required")
+	@Size(min=3, message="Field required")
 	private String name;
 	
-	
 	private String lastname;
+	
+	@Email(message = "Email should be valid")
+	private String email;
+	
+	@Min(value = 18, message = "Age should not be less than 18")
+    @Max(value = 100, message = "Age should not be greater than 100")
+	private int age;
+	
 	private String gender;
+	
 	private String ocuppation;
+	
 	private String language;
+	
 
 	public String getLanguage() {
 		return language;
@@ -21,6 +34,22 @@ public class User {
 
 	public void setLanguage(String language) {
 		this.language = language;
+	}
+	
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public Integer getAge() {
+		return age;
+	}
+
+	public void setAge(Integer age) {
+		this.age = age;
 	}
 
 	public String getOcuppation() {
