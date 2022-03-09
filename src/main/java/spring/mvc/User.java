@@ -1,8 +1,15 @@
 package spring.mvc;
 
-public class User {
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
+public class User {
+	
+	@NotNull
+	@Size(min=3, message=" Field required")
 	private String name;
+	
+	
 	private String lastname;
 	private String gender;
 	private String ocuppation;

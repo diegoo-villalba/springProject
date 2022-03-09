@@ -1,7 +1,10 @@
 package spring.mvc;
 
+import javax.validation.Valid;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -27,11 +30,15 @@ public class UserController {
 	 * This method shows a view with the information provided by the model "newUser"
 	 */
 	@RequestMapping("/processedForm")
-	public String processedForm(@ModelAttribute("newUser") User user) {
+	public String processedForm(@Valid @ModelAttribute("newUser") User user, BindingResult validationResult) {
+		
+		if (validationResult.hasErrors()) {
+			return "registerForm";
+		} else {
 		
 		//Nombre del formulario de confirmación
 		return "successfulRegistration";
-		
+		}
 	}
 
 }

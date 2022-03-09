@@ -13,6 +13,7 @@
 <form:form action="processedForm" modelAttribute="newUser">
 
 Name<form:input path="name"/>
+<form:errors path="name" style="color: red"></form:errors>
 
 <br/><br/><br/><br/>
 
