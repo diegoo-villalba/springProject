@@ -12,6 +12,8 @@ The user <strong>${newUser.name } ${newUser.lastname }</strong> and email <stron
 <br/>
 The age of <strong>${newUser.name }</strong> is: <strong>${newUser.age}</strong>
 <br/>
+The Zip Code introduced is: <strong>${newUser.zipCode}</strong>
+<br/>
 The ocuppation of <strong>${newUser.name }</strong> is: <strong>${newUser.ocuppation}</strong>
 <br/>
 The assigned gender is: <strong>${newUser.gender}</strong>

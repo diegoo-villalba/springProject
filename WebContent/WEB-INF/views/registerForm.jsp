@@ -29,6 +29,9 @@ Email<form:input path="email"/>
 <form:errors path="email" style="color: red"></form:errors>
 <br/><br/><br/><br/>
 
+Zip Code<form:input path="zipCode"/>
+<form:errors path="zipCode" style="color: red"></form:errors>
+
 Gender: <br/>
 
 Female<form:radiobutton path="gender" value="Female"/>

@@ -4,6 +4,7 @@ import javax.validation.constraints.Email;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
 public class User {
@@ -15,11 +16,15 @@ public class User {
 	private String lastname;
 	
 	@Email(message = "Email should be valid")
+	@Pattern(regexp="^[a-zA-Z0-9_!#$%&'*+/=?`{|}~^.-]+@[a-zA-Z0-9.-]+$")
 	private String email;
 	
 	@Min(value = 18, message = "Age should not be less than 18")
     @Max(value = 100, message = "Age should not be greater than 100")
 	private int age;
+	
+	@Pattern(regexp="[C0-9]{5}", message="The zip code must have only 4 numbers")
+	private String zipCode;
 	
 	private String gender;
 	
@@ -82,6 +87,14 @@ public class User {
 
 	public String getLastname() {
 		return lastname;
+	}
+
+	public String getZipCode() {
+		return zipCode;
+	}
+
+	public void setZipCode(String zipCode) {
+		this.zipCode = zipCode;
 	}
 
 }
