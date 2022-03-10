@@ -23,7 +23,7 @@ public class User {
     @Max(value = 100, message = "Age should not be greater than 100")
 	private int age;
 	
-	@Pattern(regexp="[C0-9]{5}", message="The zip code must have only 4 numbers")
+	@Pattern(regexp="[0-9]{4}", message="The zip code must have only 4 numbers")
 	private String zipCode;
 	
 	private String gender;
